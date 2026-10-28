@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-09-25T12:29:10.528449",
+  "goal": "Move the red cube to the target area and move the blue cube to the target area",
+  "events": [
+    {
+      "timestamp": "2026-09-25T12:29:10.528449",
+      "event": "SUBGOAL_START",
+      "details": "PickSkill {'target': 'red_cube'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:11.167078",
+      "event": "SUBGOAL_SUCCESS",
+      "details": "PickSkill completed successfully"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:11.167078",
+      "event": "SUBGOAL_START",
+      "details": "MoveSkill {'target': 'red_cube', 'destination': 'target_area'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:12.522107",
+      "event": "SUBGOAL_SUCCESS",
+      "details": "MoveSkill completed successfully"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:12.522623",
+      "event": "SUBGOAL_START",
+      "details": "PlaceSkill {'target': 'red_cube', 'destination': 'target_area'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:12.669380",
+      "event": "SUBGOAL_SUCCESS",
+      "details": "PlaceSkill completed successfully"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:12.669380",
+      "event": "SUBGOAL_START",
+      "details": "PickSkill {'target': 'blue_cube'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:12.670728",
+      "event": "FAILURE_INJECTED",
+      "details": "CONTROLLED EXPERIMENTAL FAILURE for pick skill"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:13.080957",
+      "event": "SUBGOAL_FAILURE",
+      "details": "Controlled failure applied to PickSkill"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:13.082991",
+      "event": "FAILURE_DETECTED",
+      "details": "Detector caught failure in PickSkill"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:13.082991",
+      "event": "FAILURE_CLASSIFIED",
+      "details": "Type: GRASP_FAILURE, Conf: 1.0"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:13.084515",
+      "event": "RECOVERY_START",
+      "details": "Requesting recovery for GRASP_FAILURE"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:13.086545",
+      "event": "RECOVERY_DECISION",
+      "details": "Strategy chosen: REGRASP"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:13.087054",
+      "event": "RECOVERY_SUCCESS",
+      "details": "Adaptive recovery resolved the issue."
+    },
+    {
+      "timestamp": "2026-09-25T12:29:13.088069",
+      "event": "SUBGOAL_START",
+      "details": "PickSkill {'target': 'blue_cube'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:13.305755",
+      "event": "SUBGOAL_SUCCESS",
+      "details": "PickSkill completed successfully"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:13.306264",
+      "event": "SUBGOAL_START",
+      "details": "MoveSkill {'target': 'blue_cube', 'destination': 'target_area'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:14.045293",
+      "event": "SUBGOAL_SUCCESS",
+      "details": "MoveSkill completed successfully"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:14.045293",
+      "event": "SUBGOAL_START",
+      "details": "PlaceSkill {'target': 'blue_cube', 'destination': 'target_area'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:14.215263",
+      "event": "SUBGOAL_SUCCESS",
+      "details": "PlaceSkill completed successfully"
+    },
+    {
+      "timestamp": "2026-09-25T12:29:14.215263",
+      "event": "TASK_COMPLETE",
+      "details": "All subgoals achieved successfully."
+    }
+  ]
+}

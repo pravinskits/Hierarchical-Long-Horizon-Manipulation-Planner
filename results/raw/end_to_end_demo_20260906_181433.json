@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-09-06T18:14:33.076773",
+  "goal": "Move the red cube to the target, then move the blue cube beside it.",
+  "events": [
+    {
+      "timestamp": "2026-09-06T18:14:33.076773",
+      "event": "SUBGOAL_START",
+      "details": "PickSkill {'target': 'red_cube'}"
+    },
+    {
+      "timestamp": "2026-09-06T18:14:33.991803",
+      "event": "FAILURE_DETECTED",
+      "details": "Detector caught failure in PickSkill"
+    },
+    {
+      "timestamp": "2026-09-06T18:14:33.991803",
+      "event": "FAILURE_CLASSIFIED",
+      "details": "Type: EXECUTION_ERROR, Conf: 0.7"
+    },
+    {
+      "timestamp": "2026-09-06T18:14:33.992809",
+      "event": "RECOVERY_START",
+      "details": "Requesting recovery for EXECUTION_ERROR"
+    },
+    {
+      "timestamp": "2026-09-06T18:14:33.993313",
+      "event": "RECOVERY_DECISION",
+      "details": "Strategy chosen: REPLAN"
+    },
+    {
+      "timestamp": "2026-09-06T18:14:33.993313",
+      "event": "RECOVERY_FAILED",
+      "details": "Adaptive recovery could not resolve the issue."
+    },
+    {
+      "timestamp": "2026-09-06T18:14:33.993313",
+      "event": "TASK_FAILED",
+      "details": "Task could not be completed."
+    }
+  ]
+}

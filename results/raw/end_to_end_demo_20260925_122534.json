@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-09-25T12:25:31.910290",
+  "goal": "Move the red cube to the target, then move the blue cube beside it.",
+  "events": [
+    {
+      "timestamp": "2026-09-25T12:25:31.911683",
+      "event": "SUBGOAL_START",
+      "details": "PickSkill {'target': 'red_cube'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:25:32.524718",
+      "event": "SUBGOAL_SUCCESS",
+      "details": "PickSkill completed successfully"
+    },
+    {
+      "timestamp": "2026-09-25T12:25:32.525229",
+      "event": "SUBGOAL_START",
+      "details": "MoveSkill {'target': 'red_cube', 'destination': 'target,_then_move_the_blue_cube_beside_it.'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:25:33.860232",
+      "event": "SUBGOAL_SUCCESS",
+      "details": "MoveSkill completed successfully"
+    },
+    {
+      "timestamp": "2026-09-25T12:25:33.861459",
+      "event": "SUBGOAL_START",
+      "details": "PlaceSkill {'target': 'red_cube', 'destination': 'target,_then_move_the_blue_cube_beside_it.'}"
+    },
+    {
+      "timestamp": "2026-09-25T12:25:34.003250",
+      "event": "SUBGOAL_SUCCESS",
+      "details": "PlaceSkill completed successfully"
+    },
+    {
+      "timestamp": "2026-09-25T12:25:34.003250",
+      "event": "TASK_COMPLETE",
+      "details": "All subgoals achieved successfully."
+    }
+  ]
+}

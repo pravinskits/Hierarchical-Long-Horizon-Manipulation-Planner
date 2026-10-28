@@ -1,0 +1,82 @@
+app:
+  name: "Hierarchical Long-Horizon Manipulation Planner"
+  version: "0.1.0"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+sim:
+  seed: 42
+  gravity: [0, 0, -9.81]
+  timestep: 0.016666
+  camera:
+    distance: 1.8
+    yaw: 90
+    pitch: -25
+    target_pos: [-0.1, 0.0, 0.3]
+  objects:
+    red_cube:
+      pos: [0.2, 0.2, 0.05]
+    blue_cube:
+      pos: [-0.2, 0.2, 0.05]
+    green_cube:
+      pos: [-0.05, 0.3, 0.05]
+    target_area:
+      pos: [0.2, 0.0, 0.01]
+    target_area_1:
+      pos: [0.2, 0.18, 0.01]
+    target_area_2:
+      pos: [0.2, 0.0, 0.01]
+    target_area_3:
+      pos: [0.2, -0.18, 0.01]
+    right_corner_1:
+      pos: [0.3, 0.2, 0.01]
+    right_corner_2:
+      pos: [0.3, 0.4, 0.01]
+    right_corner_3:
+      pos: [0.3, 0.0, 0.01]
+    safe_zone:
+      pos: [-0.3, 0.3, 0.01]
+
+robot:
+  model: "franka_panda/panda.urdf"
+  base_position: [-0.2, 0.0, 0.0]
+  base_orientation: [0, 0, 0, 1]
+  ee_link_name: "panda_hand"
+
+skills:
+  position_tolerance: 0.08
+  movement_speed: 0.05
+  grasp_height: 0.02
+  lift_height: 0.20
+  placement_tolerance: 0.05
+
+recovery:
+  enabled: true
+  max_attempts: 3
+  allow_replan: true
+  retry_delay: 0.5
+  escalation_enabled: true
+  grasp_distance_threshold: 0.05
+  object_slip_threshold: 0.03
+  max_skill_duration: 60.0
+  collision_detection_enabled: false
+  failure_confidence_threshold: 0.8
+
+llm:
+  provider: groq
+  model: llama-3.3-70b-versatile
+  temperature: 0.0
+  max_tokens: 1024
+  timeout: 10.0
+  enabled: true
+
+api:
+  host: "127.0.0.1"
+  port: 8000
+  cors_origins:
+    - "*"
+
+database:
+  url: "sqlite:///./data/app.db"
